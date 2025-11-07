@@ -1,0 +1,21 @@
+body {
+  background-color: #e63c44;
+  width: 100%;
+  height: 100vh;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+button {
+  width: 140px;
+  height: 30px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
