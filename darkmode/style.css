@@ -1,0 +1,26 @@
+.dark {
+  background-color: #363636;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.light {
+  background-color: #ffffff;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.mode {
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+/* 다크모드일 때, 달 아이콘 숨기기 */
+/* 라이트모드일 때, 해 아이콘 숨기기 */
+body.dark .mode .dark-icon,
+body:not(.dark) .mode .light-icon {
+  display: none;
+}
+
+.light-icon {
+  color: #ffffff;
+}
