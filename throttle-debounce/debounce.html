@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debounce</title>
+  </head>
+  <style>
+    .target {
+      width: 100px;
+      height: 100px;
+      background-color: #000000;
+    }
+  </style>
+  <body>
+    <div class="target"></div>
+    <h1>미적용: <span id="normal">0</span></h1>
+    <h1>디바운스 적용: <span id="debounce">0</span></h1>
+
+    <script>
+      let num = 0;
+      let num2 = 0;
+
+      const targetEl = document.querySelector('.target');
+      targetEl.addEventListener('mousemove', function () {
+        const normalEl = document.querySelector('#normal');
+        normalEl.textContent = ++num;
+      });
+
+      targetEl.addEventListener(
+        'mousemove',
+        debounce(function () {
+          const debounceEl = document.querySelector('#debounce');
+          debounceEl.textContent = ++num2;
+        }, 1000)
+      );
+
+      // 이벤트가 끝난 후 한 번 실행
+      function debounce(callback, limit) {
+        let timeout = null;
+        return function () {
+          if (timeout) clearTimeout(timeout);
+          timeout = setTimeout(() => {
+            callback.apply(this, arguments);
+          }, limit);
+        };
+      }
+    </script>
+  </body>
+</html>
