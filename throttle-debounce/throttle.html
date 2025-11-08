@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Throttle</title>
+  </head>
+  <style>
+    .target {
+      width: 100px;
+      height: 100px;
+      background-color: #000000;
+    }
+  </style>
+  <body>
+    <div class="target"></div>
+    <h1>미적용: <span id="normal">0</span></h1>
+    <h1>쓰로틀 적용: <span id="throttle">0</span></h1>
+  </body>
+  <script>
+    let num = 0;
+    let num2 = 0;
+
+    const targetEl = document.querySelector('.target');
+    targetEl.addEventListener('mousemove', function (e) {
+      // console.log(this, e);
+      const normalEl = document.querySelector('#normal');
+      normalEl.textContent = ++num;
+    });
+
+    targetEl.addEventListener(
+      'mousemove',
+      throttle(function (e) {
+        const throttleEl = document.querySelector('#throttle');
+        throttleEl.textContent = ++num2;
+      }, 1000)
+    );
+
+    // 지정한 시간마다 최대 한번 실행
+    function throttle(callback, limit) {
+      let waiting = false;
+      // console.log(arguments);
+      return function () {
+        // console.log(arguments);
+        if (!waiting) {
+          callback.apply(this, arguments);
+          waiting = true;
+          setTimeout(() => {
+            waiting = false;
+          }, limit);
+        }
+      };
+    }
+  </script>
+</html>
