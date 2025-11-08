@@ -31,6 +31,41 @@ body {
   opacity: 0.5;
 }
 
+.todo-body__item {
+  position: relative;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.todo-body__item input[type='checkbox'] {
+  margin-right: 5px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.todo-body__item input[type='checkbox']:checked {
+  accent-color: #000000;
+}
+
+.todo-body__item input[type='checkbox']:checked + span {
+  text-decoration: line-through;
+  color: #666666;
+}
+
+.todo-body__item i {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.todo-body__item span {
+  cursor: default;
+  flex: 1;
+  word-break: break-word;
+}
+
 ul,
 li {
   padding: 0;
