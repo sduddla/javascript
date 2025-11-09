@@ -12,34 +12,39 @@
         <div id="title">Board</div>
         <div class="left-box">
           <div class="left-box1">
-            <div class="left-box1--detail"></div>
+            <div class="left-box1--top"></div>
             <!-- 날씨 -->
           </div>
           <div class="left-box2">
-            <div class="left-box2--detail"></div>
-            <h2 id="clock">00:00:00</h2>
+            <div class="left-box2--top"></div>
+            <div class="left-box2--detail">
+              <span id="clock-text">Current Time</span>
+              <h1 id="clock">00:00:00</h1>
+            </div>
           </div>
         </div>
       </div>
       <div>
         <div class="right-box">
           <div class="right-box1">
-            <div class="right-box1--detail"></div>
+            <div class="right-box1--top"></div>
             <div id="quote">
               <span id="quote-text"></span>
               <span id="quote-author"></span>
             </div>
           </div>
           <div class="right-box2">
-            <div class="right-box2--detail"></div>
+            <div class="right-box2--top"></div>
             <h1>Todo List</h1>
             <form id="todo-form">
-              <input type="text" placeholder="Write a To Do." />
+              <input type="text" placeholder="Enter a new todo" />
             </form>
             <ul id="todo-list"></ul>
           </div>
         </div>
       </div>
     </div>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
   </body>
 </html>
