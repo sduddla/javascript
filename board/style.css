@@ -79,6 +79,7 @@ body {
   border-radius: 10px 10px 0px 0px;
 }
 
+.left-box1--detail,
 .left-box2--detail {
   display: flex;
   flex-direction: column;
@@ -88,12 +89,13 @@ body {
   flex: 1;
 }
 
+#weather-title,
 #clock-text {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 #clock {
-  margin-top: 5px;
+  margin-top: 8px;
   font-size: 50px;
 }
 
@@ -176,4 +178,49 @@ input[type='checkbox']:checked {
 input[type='checkbox']:checked + span {
   text-decoration: line-through;
   color: #666666;
+}
+
+#weather-button {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
+  margin-top: 20px;
+  background-color: #efefef;
+}
+
+#weather-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 5px;
+  padding-right: 40px;
+}
+
+#icon {
+  display: none;
+  width: 150px;
+  height: 150px;
+}
+
+#temp {
+  margin-top: 3px;
+  font-size: 45px;
+  font-weight: 600;
 }

@@ -20,7 +20,21 @@
         <div class="left-box">
           <div class="left-box1">
             <div class="left-box1--top"></div>
-            <!-- 날씨 -->
+            <div class="left-box1--detail">
+              <p id="weather-title">Current Weather</p>
+              <button id="weather-button">Check the current weather</button>
+              <div id="weather-box">
+                <div id="weather-info">
+                  <div id="left">
+                    <img id="icon" alt="weather icon" />
+                  </div>
+                  <div id="right">
+                    <span id="description"></span>
+                    <span id="temp"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="left-box2">
             <div class="left-box2--top"></div>
@@ -58,5 +72,6 @@
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/todo.js"></script>
+    <script type="module" src="js/weather//weather.js"></script>
   </body>
 </html>
