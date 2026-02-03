@@ -13,6 +13,7 @@ body {
   font-size: 130px;
   color: #013d8f;
   font-weight: 300;
+  padding-top: 40px;
 }
 
 .box {
@@ -223,4 +224,36 @@ input[type='checkbox']:checked + span {
   margin-top: 3px;
   font-size: 45px;
   font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .box {
+    flex-direction: column;
+    margin: 0 20px;
+  }
+
+  .right-box1,
+  .right-box2 {
+    width: 420px;
+  }
+
+  .right-box1 {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 992px) {
+  #title {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  #title {
+    font-size: 80px;
+  }
+
+  .right-box2 {
+    margin-bottom: 40px;
+  }
 }
